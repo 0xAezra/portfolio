@@ -17,7 +17,7 @@
     <body>
         <header class="site-header">
             <a class="brand" href="#home" aria-label="Theus Vito, home">
-                <span class="brand-mark" aria-hidden="true">T<span>V</span></span>
+                <img class="brand-mark" src="assets/icons/favicon.svg" alt="" aria-hidden="true">
                 <span>Theus Vito</span>
             </a>
             <nav class="nav" aria-label="Primary navigation">
@@ -56,16 +56,13 @@
             </section>
 
             <section class="work-section section-wrap" id="work" aria-labelledby="work-title">
-                <div class="section-heading">
-                    <div>
-                        <p class="eyebrow">Selected work <span class="eyebrow-divider">/</span> 2024—26</p>
-                        <h2 id="work-title">A few things I’ve made<span class="heading-period">.</span></h2>
-                    </div>
-                    <p class="section-aside">A collection of ideas shaped into practical, people-first experiences.</p>
-                </div>
-
                 <div class="project-list">
                     <article class="project-card project-featured" id="padbuddy">
+                        <div class="section-heading">
+                            <div>
+                                <h2 id="work-title">A few things I’ve made<span class="heading-period">.</span></h2>
+                            </div>
+                        </div>
                         <div class="project-visual visual-green">
                             <div class="image-slideshow" role="group" aria-label="PadBuddy project screenshots">
                                 <div class="slideshow-track">
@@ -74,17 +71,19 @@
                                     <img src="assets/images/projects/pad-buddy/map-plotting-2.png" alt="PadBuddy farm map plotting view two">
                                     <img src="assets/images/projects/pad-buddy/field_dashboard.png" alt="PadBuddy field dashboard overview">
                                 </div>
-                                <button class="slideshow-button previous" type="button" aria-label="Show previous PadBuddy screenshot">&#8592;</button>
-                                <button class="slideshow-button next" type="button" aria-label="Show next PadBuddy screenshot">&#8594;</button>
-                                <p class="slideshow-status" aria-live="polite">1 / 4</p>
+                                <button class="slideshow-button previous" type="button" aria-label="Show previous PadBuddy screenshot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+                                <button class="slideshow-button next" type="button" aria-label="Show next PadBuddy screenshot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
                             </div>
-                            <span class="visual-label">01 / PRODUCT DASHBOARD</span>
+                            <p class="slideshow-status" aria-live="polite">01 / 04</p>
                         </div>
                         <div class="project-copy">
-                            <div class="project-meta"><span>01</span><span>Farm monitoring</span></div>
-                            <h3>PadBuddy</h3>
+                            <h3><a href="https://ricepadbudddy.vercel.app/" target="_blank" rel="noopener noreferrer">PadBuddy - Rice Farm Management</a></h3>
                             <p>A clear view of the field. PadBuddy brings rice-farm operations, field maps, and progress tracking into one friendly dashboard.</p>
-                            <div class="project-tags"><span>Dashboard</span><span>Mapping</span><span>Progress tracking</span></div>
+                            <ul class="project-tech" aria-label="Technologies used">
+                                <li><span class="tech-mark tech-next" aria-hidden="true">N</span>Next.js</li>
+                                <li><span class="tech-mark tech-typescript" aria-hidden="true">TS</span>TypeScript</li>
+                                <li><span class="tech-mark tech-firebase" aria-hidden="true">✦</span>Firebase</li>
+                            </ul>
                         </div>
                     </article>
 
@@ -95,30 +94,34 @@
                                     <img src="assets/images/projects/document-progress-tracker/auth-light-mode.png" alt="Document progress tracker sign-in screen in light mode">
                                     <img src="assets/images/projects/document-progress-tracker/auth-dark-mode.png" alt="Document progress tracker sign-in screen in dark mode">
                                 </div>
-                                <button class="slideshow-button previous" type="button" aria-label="Show previous document tracker screenshot">&#8592;</button>
-                                <button class="slideshow-button next" type="button" aria-label="Show next document tracker screenshot">&#8594;</button>
-                                <p class="slideshow-status" aria-live="polite">1 / 2</p>
+                                <button class="slideshow-button previous" type="button" aria-label="Show previous NCIP-GSD Management System screenshot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+                                <button class="slideshow-button next" type="button" aria-label="Show next NCIP-GSD Management System screenshot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
                             </div>
-                            <span class="visual-label">02 / LIGHT + DARK</span>
+                            <p class="slideshow-status" aria-live="polite">01 / 02</p>
                         </div>
                         <div class="project-copy">
-                            <div class="project-meta"><span>02</span><span>Productivity tool</span></div>
-                            <h3>Document Progress Tracker</h3>
+                            <h3><a href="https://ncip-gsd.vercel.app/auth" target="_blank" rel="noopener noreferrer">NCIP-GSD Management System</a></h3>
                             <p>A focused sign-in experience for a document tracking tool, designed to feel at home in both light and dark mode.</p>
-                            <div class="project-tags"><span>Authentication</span><span>Light + dark mode</span></div>
+                            <ul class="project-tech" aria-label="Technologies used">
+                                <li><span class="tech-mark tech-next" aria-hidden="true">N</span>Next.js</li>
+                                <li><span class="tech-mark tech-typescript" aria-hidden="true">TS</span>TypeScript</li>
+                                <li><span class="tech-mark tech-firebase" aria-hidden="true">✦</span>Firebase</li>
+                            </ul>
                         </div>
                     </article>
 
                     <article class="project-card" id="mocas">
                         <div class="project-visual visual-forest">
                             <img src="assets/images/projects/mocas/mocas.png" alt="MOCAS scholarship portal landing page">
-                            <span class="visual-label">03 / SCHOLARSHIP PORTAL</span>
                         </div>
                         <div class="project-copy">
-                            <div class="project-meta"><span>03</span><span>Education platform</span></div>
-                            <h3>MOCAS</h3>
+                            <h3><a href="https://osas-i-scholar.vercel.app/" target="_blank" rel="noopener noreferrer">MOCAS Portal</a></h3>
                             <p>A scholarship application and student support portal, bringing online applications, status tracking, and document access together.</p>
-                            <div class="project-tags"><span>Online applications</span><span>Status tracking</span><span>Student support</span></div>
+                            <ul class="project-tech" aria-label="Technologies used">
+                                <li><span class="tech-mark tech-next" aria-hidden="true">N</span>Next.js</li>
+                                <li><span class="tech-mark tech-typescript" aria-hidden="true">TS</span>TypeScript</li>
+                                <li><span class="tech-mark tech-firebase" aria-hidden="true">✦</span>Firebase</li>
+                            </ul>
                         </div>
                     </article>
 
@@ -130,17 +133,19 @@
                                     <img src="assets/images/projects/savis/customize_settings.png" alt="Savi's Atelier Apparel customization settings screen">
                                     <img src="assets/images/projects/savis/savis.png" alt="Savi's Atelier Apparel featured collection page">
                                 </div>
-                                <button class="slideshow-button previous" type="button" aria-label="Show previous Savi's screenshot">&#8592;</button>
-                                <button class="slideshow-button next" type="button" aria-label="Show next Savi's screenshot">&#8594;</button>
-                                <p class="slideshow-status" aria-live="polite">1 / 3</p>
+                                <button class="slideshow-button previous" type="button" aria-label="Show previous Luna Boutique screenshot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+                                <button class="slideshow-button next" type="button" aria-label="Show next Luna Boutique screenshot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
                             </div>
-                            <span class="visual-label">04 / E-COMMERCE</span>
+                            <p class="slideshow-status" aria-live="polite">01 / 03</p>
                         </div>
                         <div class="project-copy">
-                            <div class="project-meta"><span>04</span><span>Digital storefront</span></div>
-                            <h3>Savi’s Atelier Apparel</h3>
+                            <h3><a href="https://savis-atelier-apparel.vercel.app/" target="_blank" rel="noopener noreferrer">Luna Boutique</a></h3>
                             <p>A fashion storefront with a confident visual identity, designed to bring curated pieces and a boutique feel to the web.</p>
-                            <div class="project-tags"><span>Online store</span><span>Brand experience</span></div>
+                            <ul class="project-tech" aria-label="Technologies used">
+                                <li><span class="tech-mark tech-next" aria-hidden="true">N</span>Next.js</li>
+                                <li><span class="tech-mark tech-typescript" aria-hidden="true">TS</span>TypeScript</li>
+                                <li><span class="tech-mark tech-firebase" aria-hidden="true">✦</span>Firebase</li>
+                            </ul>
                         </div>
                     </article>
                 </div>
@@ -148,50 +153,77 @@
 
             <section class="about-section" id="about" aria-labelledby="about-title">
                 <div class="about-inner section-wrap">
-                    <p class="eyebrow"><span class="eyebrow-dot"></span> The person behind the pixels</p>
-                    <div class="about-content">
-                        <h2 id="about-title">Full-stack developer. <span>Hardware tinkerer.</span> Thoughtful problem solver.</h2>
-                        <div class="about-copy">
-                            <p>I’m an Information Technology graduate with hands-on experience in full-stack development, IoT systems, and IT support.</p>
-                            <p>I’ve led projects and integrated web applications with hardware, building practical solutions—from thoughtful interfaces to connected systems that make everyday work easier.</p>
+                    <div class="about-intro">
+                        <div class="about-intro-heading">
+                            <p class="eyebrow"><span class="eyebrow-dot"></span> A bit about me</p>
+                            <h2 id="about-title">I like building things that <span>make work easier.</span></h2>
+                        </div>
+                        <div class="about-intro-copy">
+                            <p>I’m Theus Vito, an IT graduate who likes making technology easier to use.</p>
+                            <p>I’ve built web apps, troubleshot hardware and printers, and helped staff get comfortable with collaboration tools. I like that mix of writing code and solving practical problems.</p>
                             <button class="text-link text-link-light contact-trigger" type="button" aria-haspopup="dialog" aria-controls="contact-dialog">Get in touch <span aria-hidden="true">↗</span></button>
                         </div>
                     </div>
-                    <div class="about-details">
-                        <section class="about-detail" aria-labelledby="experience-title">
-                            <p class="about-kicker">01 / EXPERIENCE</p>
-                            <h3 id="experience-title">IT Staff · On-the-Job Training</h3>
-                            <p class="experience-place">National Commission on Indigenous Peoples · Central Office, Quezon City</p>
-                            <p class="experience-date">March – May 2026</p>
+
+                    <section class="about-experience" aria-labelledby="experience-title">
+                        <div class="about-section-heading">
+                            <p class="about-kicker">01 <span>/</span> EXPERIENCE</p>
+                            <p class="about-section-note">Support, digitization, and a document tracker built from scratch.</p>
+                        </div>
+                        <div class="experience-card">
+                            <div class="experience-summary">
+                                <p class="experience-date">MARCH — MAY 2026</p>
+                                <h3 id="experience-title">IT Staff <span>·</span> On-the-Job Training</h3>
+                                <p class="experience-place">National Commission on Indigenous Peoples<br>Central Office · Quezon City</p>
+                            </div>
                             <ul class="experience-list">
-                                <li>Supported day-to-day operations for the General Services Division, including document processing and Microsoft 365 support.</li>
-                                <li>Troubleshot computer hardware and printers, and helped staff adopt Microsoft Teams for collaboration.</li>
-                                <li>Contributed to digitization initiatives and evaluated existing systems for usability improvements.</li>
-                                <li>Built a document progress tracker with Next.js and Firebase to monitor received documents and processing status.</li>
+                                <li>Supported the General Services Division with document processing and Microsoft 365.</li>
+                                <li>Troubleshot computer hardware and printers, and helped staff use Microsoft Teams.</li>
+                                <li>Contributed to digitization initiatives and looked for usability improvements in existing systems.</li>
+                                <li>Built a document progress tracker with Next.js and Firebase to follow incoming documents and their status.</li>
                             </ul>
-                        </section>
-                        <section class="about-detail tech-detail" aria-labelledby="tech-title">
-                            <p class="about-kicker">02 / TOOLKIT</p>
-                            <h3 id="tech-title">Tech stack</h3>
+                        </div>
+                    </section>
+
+                    <div class="about-lower">
+                        <section class="about-toolkit" aria-labelledby="tech-title">
+                            <div class="about-section-heading">
+                                <p class="about-kicker">02 <span>/</span> TOOLKIT</p>
+                                <h3 id="tech-title">Things I work with</h3>
+                            </div>
                             <div class="stack-groups">
-                                <div class="stack-group"><h4>Web</h4><p>Next.js · React · TypeScript · JavaScript · Vue.js · HTML · CSS · Tailwind</p></div>
-                                <div class="stack-group"><h4>Backend & data</h4><p>Node.js · PHP · Laravel · Firebase · Firestore · MySQL</p></div>
-                                <div class="stack-group"><h4>Mobile & desktop</h4><p>PWA · Flutter · Windows Forms · C#</p></div>
-                                <div class="stack-group"><h4>Hardware & tools</h4><p>ESP32 · Arduino · Raspberry Pi · C++ · Git · GitHub · VS Code · Visual Studio · Android Studio · Arduino IDE</p></div>
+                                <div class="stack-group">
+                                    <h4>Web</h4>
+                                    <ul class="skill-tags"><li>Next.js</li><li>React</li><li>TypeScript</li><li>JavaScript</li><li>Vue.js</li><li>HTML</li><li>CSS</li><li>Tailwind</li></ul>
+                                </div>
+                                <div class="stack-group">
+                                    <h4>Backend & data</h4>
+                                    <ul class="skill-tags"><li>Node.js</li><li>PHP</li><li>Laravel</li><li>Firebase</li><li>Firestore</li><li>MySQL</li></ul>
+                                </div>
+                                <div class="stack-group">
+                                    <h4>Mobile & desktop</h4>
+                                    <ul class="skill-tags"><li>PWA</li><li>Flutter</li><li>Windows Forms</li><li>C#</li></ul>
+                                </div>
+                                <div class="stack-group">
+                                    <h4>Hardware & tools</h4>
+                                    <ul class="skill-tags"><li>ESP32</li><li>Arduino</li><li>Raspberry Pi</li><li>C++</li><li>Git</li><li>GitHub</li><li>VS Code</li><li>Visual Studio</li><li>Android Studio</li><li>Arduino IDE</li></ul>
+                                </div>
                             </div>
                         </section>
-                        <section class="about-detail education-detail" aria-labelledby="education-title">
-                            <p class="about-kicker">03 / EDUCATION</p>
+
+                        <section class="about-education" aria-labelledby="education-title">
+                            <div class="about-section-heading">
+                                <p class="about-kicker">03 <span>/</span> EDUCATION</p>
+                                <span class="education-year">2026</span>
+                            </div>
                             <h3 id="education-title">Bachelor of Science in Information Technology</h3>
-                            <p>Mindoro State University – Bongabong Campus</p>
-                            <p class="experience-date">June 2026 · Bongabong, Oriental Mindoro</p>
+                            <p>Mindoro State University <span>·</span> Bongabong Campus</p>
                             <div class="education-secondary">
-                                <h4>Accountancy, Business, and Management</h4>
-                                <p>Bulbugan National High School · 2022 · Gloria, Oriental Mindoro</p>
+                                <h4>HIGH SCHOOL</h4>
+                                <p>Accountancy, Business, and Management<br>Bulbugan National High School · 2022</p>
                             </div>
                         </section>
                     </div>
-                    <div class="about-note"><span>MY APPROACH</span><span>Thoughtful from first sketch to final detail.</span></div>
                 </div>
             </section>
 

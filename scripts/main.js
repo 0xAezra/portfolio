@@ -32,7 +32,7 @@ if (contactDialog instanceof HTMLDialogElement) {
 
 document.querySelectorAll(".image-slideshow").forEach((slideshow) => {
     const track = slideshow.querySelector(".slideshow-track");
-    const status = slideshow.querySelector(".slideshow-status");
+    const status = slideshow.parentElement?.querySelector(".slideshow-status");
     const previousButton = slideshow.querySelector(".slideshow-button.previous");
     const nextButton = slideshow.querySelector(".slideshow-button.next");
 
@@ -42,19 +42,75 @@ document.querySelectorAll(".image-slideshow").forEach((slideshow) => {
 
     const slides = Array.from(track.querySelectorAll("img"));
     let activeSlide = 0;
+    let autoplayTimer;
+    let isHovered = false;
+    let isFocused = false;
+    let isInView = true;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     if (slides.length < 2) {
         previousButton.hidden = true;
         nextButton.hidden = true;
+        status.hidden = true;
         return;
     }
 
     function showSlide(index) {
         activeSlide = (index + slides.length) % slides.length;
         track.style.transform = `translateX(-${activeSlide * 100}%)`;
-        status.textContent = `${activeSlide + 1} / ${slides.length}`;
+        status.textContent = `${String(activeSlide + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
     }
 
-    previousButton.addEventListener("click", () => showSlide(activeSlide - 1));
-    nextButton.addEventListener("click", () => showSlide(activeSlide + 1));
+    function stopAutoplay() {
+        window.clearInterval(autoplayTimer);
+        autoplayTimer = undefined;
+    }
+
+    function startAutoplay() {
+        stopAutoplay();
+        if (document.hidden || !isInView || isHovered || isFocused || reducedMotion.matches) {
+            return;
+        }
+
+        autoplayTimer = window.setInterval(() => showSlide(activeSlide + 1), 5000);
+    }
+
+    function changeSlide(index) {
+        showSlide(index);
+        startAutoplay();
+    }
+
+    previousButton.addEventListener("click", () => changeSlide(activeSlide - 1));
+    nextButton.addEventListener("click", () => changeSlide(activeSlide + 1));
+    slideshow.addEventListener("pointerenter", () => {
+        isHovered = true;
+        stopAutoplay();
+    });
+    slideshow.addEventListener("pointerleave", () => {
+        isHovered = false;
+        startAutoplay();
+    });
+    slideshow.addEventListener("focusin", () => {
+        isFocused = true;
+        stopAutoplay();
+    });
+    slideshow.addEventListener("focusout", (event) => {
+        if (!slideshow.contains(event.relatedTarget)) {
+            isFocused = false;
+            startAutoplay();
+        }
+    });
+    document.addEventListener("visibilitychange", startAutoplay);
+    reducedMotion.addEventListener("change", startAutoplay);
+
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(([entry]) => {
+            isInView = entry.isIntersecting;
+            startAutoplay();
+        }, { threshold: 0.2 });
+        observer.observe(slideshow);
+    }
+
+    showSlide(activeSlide);
+    startAutoplay();
 });
